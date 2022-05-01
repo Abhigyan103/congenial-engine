@@ -1,0 +1,11 @@
+long long int poww(int base,int exp){
+    long long int rest=1;
+    while(base>0){
+    if(exp & 1){
+        rest*=base;
+    }
+    base*=base;
+    exp>>=1;
+    }
+    return rest;
+}
